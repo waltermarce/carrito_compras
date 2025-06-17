@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Kiosco</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Kiosco El Paraíso 🛒</h1>
+
+  <div class="productos">
+    <div class="producto">
+      <img src="https://i.imgur.com/UKkZ3Ic.png" alt="Gaseosa">
+      <h3>Gaseosa</h3>
+      <p>$300</p>
+      <input type="number" id="cant-gaseosa" min="1" value="1">
+      <button onclick="agregarAlCarrito('Gaseosa', 300, 'cant-gaseosa')">Agregar</button>
+    </div>
+
+    <div class="producto">
+      <img src="https://i.imgur.com/5ZQ1ybs.png" alt="Alfajor">
+      <h3>Alfajor</h3>
+      <p>$250</p>
+      <input type="number" id="cant-alfajor" min="1" value="1">
+      <button onclick="agregarAlCarrito('Alfajor', 250, 'cant-alfajor')">Agregar</button>
+    </div>
+
+    <div class="producto">
+      <img src="https://i.imgur.com/F7PYrxE.png" alt="Papas fritas">
+      <h3>Papas Fritas</h3>
+      <p>$400</p>
+      <input type="number" id="cant-papas" min="1" value="1">
+      <button onclick="agregarAlCarrito('Papas Fritas', 400, 'cant-papas')">Agregar</button>
+    </div>
+  </div>
+
+  <div class="carrito">
+    <h2>🧾 Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p><strong>Total: $<span id="total">0</span></strong></p>
+    <button onclick="confirmarCompra()">✅ Confirmar compra</button>
+    <button onclick="vaciarCarrito()">🗑️ Vaciar carrito</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
